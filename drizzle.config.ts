@@ -1,10 +1,13 @@
-import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
-  schema: './config/schema.tsx',
+  schema: './config/schema.tsx', // or .tsx if you're using TSX
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
+    host: 'ep-sweet-violet-a8bc8leu-pooler.eastus2.azure.neon.tech',
+    user: 'neondb_owner',
+    password: 'npg_jKVu8O5XFcSH',
+    database: 'AI_Agent',
+    ssl: true,
   },
 });
